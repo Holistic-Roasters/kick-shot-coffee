@@ -1,7 +1,7 @@
 {
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
+  "buildCommand": "pnpm run build",  // <-- Change this
+  "installCommand": "pnpm install", // <-- Change this
   "framework": "nextjs",
   "outputDirectory": ".next",
-  "devCommand": "npm run dev"
+  "devCommand": "pnpm run dev"      // <-- Optional: Change this too for consistency if needed
 }
