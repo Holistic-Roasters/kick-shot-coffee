@@ -1,0 +1,129 @@
+/* Mobile Optimization Styles */
+
+/* Increase touch target sizes for mobile */
+@media (max-width: 768px) {
+  button, 
+  .button,
+  input[type="submit"],
+  input[type="button"],
+  a.button,
+  a.btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 16px;
+  }
+  
+  /* Improve quantity selector for mobile */
+  .quantity-selector button {
+    padding: 8px 16px;
+    font-size: 1.25rem;
+  }
+  
+  /* Increase form field touch targets */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="password"],
+  select,
+  textarea {
+    min-height: 44px;
+    padding: 12px;
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+  
+  /* Improve checkbox touch targets */
+  input[type="checkbox"] {
+    min-width: 24px;
+    min-height: 24px;
+  }
+  
+  /* Adjust spacing for mobile */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  
+  /* Improve readability on small screens */
+  p, li {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  /* Fix Safari animation issues */
+  .progress-bar-fill {
+    transition: transform 0.5s ease-out;
+    transform-origin: left;
+  }
+}
+
+/* Additional font fallbacks for better cross-platform consistency */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('/fonts/SpaceGrotesk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Trench';
+  src: url('/fonts/Trench100.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Improve font rendering across browsers */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Improve color contrast for accessibility */
+.text-white {
+  color: #FFFFFF;
+}
+
+.text-neuro-yellow {
+  color: #FFE81F; /* Slightly brighter than original for better contrast */
+}
+
+/* Fix for Safari animation performance */
+.funding-progress-bar {
+  position: relative;
+  overflow: hidden;
+}
+
+.funding-progress-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  transform: translateX(0);
+  transition: transform 0.5s ease-out;
+}
+
+/* Ensure proper display on older Android devices */
+@supports (-webkit-appearance:none) {
+  body {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  .font-trench {
+    font-family: 'Trench', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+}
